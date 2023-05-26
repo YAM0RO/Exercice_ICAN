@@ -4,27 +4,16 @@ using UnityEngine;
 
 public class DeathScript : MonoBehaviour
 {
-    public GameObject startPoint;
-    public GameObject player;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+  
+    public CharacterController2D Player;
+    public CharacterController2D Player2;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-       if (collision.gameObject.CompareTag("Player"))
-        {
-            player.transform.position = startPoint.transform.position;
-        }
+        Player.Die();
+        Player2.Die();
+
+
 
     }
 }

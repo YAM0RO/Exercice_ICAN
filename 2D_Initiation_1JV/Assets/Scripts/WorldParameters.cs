@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -22,6 +23,12 @@ public class WorldParameters : MonoBehaviour
     {
         instance = this;
     }
+
+    internal Color GetColor(object color)
+    {
+        throw new NotImplementedException();
+    }
+
     private void OnValidate()
     {
         instance = this;

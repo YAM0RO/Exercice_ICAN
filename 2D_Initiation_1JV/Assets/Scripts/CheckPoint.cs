@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class CheckPoint : MonoBehaviour
 {
+
     [SerializeField] private ElementColor forColor;
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -13,6 +14,8 @@ public class CheckPoint : MonoBehaviour
         if(character && controller && character.color == forColor)
         {
             controller.checkpoint = this;
+
         }
+
     }
 }

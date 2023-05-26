@@ -22,9 +22,15 @@ public class EndingLevel : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D pCollision)
     {
-        //if (pCollision.gameObject.CompareTag("Player"))
-        //{
+        if (pCollision.gameObject.CompareTag("Player"))
+        {
             SceneManager.LoadScene(levelname);
-        //}
+        }
+    }
+    public void ChangeLevel()
+    {
+       
+            SceneManager.LoadScene(levelname);
+       
     }
 }

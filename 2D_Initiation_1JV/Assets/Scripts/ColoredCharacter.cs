@@ -13,6 +13,8 @@ public class ColoredCharacter : MonoBehaviour
         if (renderer && WorldParameters.Instance)
             renderer.color = WorldParameters.Instance.GetColor(color);
 
+#if UNITY_EDITOR
+
         EditorApplication.delayCall += () =>
         {
             if (this != null)
@@ -23,6 +25,7 @@ public class ColoredCharacter : MonoBehaviour
 				controller.groundCheck.gameObject.layer = WorldParameters.Instance.GetColorCharacterGroundMask(color);
 		};
 
-       
+#endif
     }
+
 }
